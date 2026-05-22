@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Boss Awning and Canopies</title>
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="top">
+            <h2 class="logo">Big Boss Awning & Canopies</h2>
+            <div class="nav-links">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'feedback' %}">Feedback</a>
+                <a href="{% url 'work' %}">Our Work</a>
+            </div>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <p>© 2026 Big Boss Awning and Canopies</p>
+    </footer>
+</body>
+</html>

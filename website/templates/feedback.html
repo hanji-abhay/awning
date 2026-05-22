@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Contact Us | Big Boss Awning & Canopies {% endblock %}
+{% block content %}
+ {% if messages %}
+    {% for message in messages %}
+        <div class="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<section class="feedback-section">
+        <div class="feedback-container">
+            <h1>Customer Feedback</h1>
+            <p>
+                Your feedback helps us improve
+                our services and deliver better
+                canopy solutions.
+            </p>
+
+            <form class="form" action="" method="POST">
+                {% csrf_token %}
+                <div class="rating-box">
+                    <input type="radio" name="rating" value="5" id="star5" required>
+                    <label for="star5">★</label>
+                    <input type="radio" name="rating" value="4" id="star4">
+                    <label for="star4">★</label>
+                    <input type="radio" name="rating" value="3" id="star3">
+                    <label for="star3">★</label>
+                    <input type="radio" name="rating" value="2" id="star2">
+                    <label for="star2">★</label>
+                    <input type="radio" name="rating" value="1" id="star1">
+                    <label for="star1">★</label>
+                </div>
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="text" name="phone" placeholder="Your Phone Number" required>
+                <textarea name="message" placeholder="Write your feedback here..." required></textarea>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+             <div class="rating-summary">
+                <h2>{{ average_rating }} /5 ⭐</h2>
+                <p>Customer Satisfaction Rating</p>
+            </div>
+            {% for f in feedbacks %}
+            <div class="review-card">
+                <h4>{{ f.name }}</h4>
+                <p>⭐ {{ f.rating }}/5</p>
+                <p>{{ f.message }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

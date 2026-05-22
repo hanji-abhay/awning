@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Contact Us | Big Boss Awning & Canopies {% endblock %}
+{% block content %}
+
+ {% if messages %}
+    {% for message in messages %}
+        <div class="alert">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+<section class="contact-section">
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h1>
+                    Contact Us
+                </h1>
+
+                <p>
+                    Have questions or want a custom canopy solution?
+                    Get in touch with us for stylish,
+                    durable, and reliable awning services.
+                </p>
+
+                <div class="info-box">
+                    <h3>Phone</h3>
+                    <p>+91 9210808293</p>
+                    <p>+91 9718951285</p>
+                </div>
+
+                <div class="info-box">
+                   <h3>Email</h3>
+                    <p>bigbosscanopies@gmail.com</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>Location</h3>
+                    <p>
+                        Ghaziabad, Uttar Pradesh
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Want to know something specific?</h2>
+                <form action="" method="POST" class="form">
+                    {% csrf_token %}
+                    <input type="text" name="name" placeholder=" Your Name " required>
+                    <input type="email" name="email" placeholder=" Your Email " required>
+                    <input type="text" name="phone" placeholder=" Phone Number " required>
+                    <textarea name="message" placeholder=" Tell us your requirements "></textarea>
+                    <br>
+                    <button type="submit">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

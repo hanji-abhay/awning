@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Contact Us | Big Boss Awning & Canopies {% endblock %}
+{% block content %}
+<section class="work-section">
+        <h1>Our Recent Projects</h1>
+        <div class="gallery">
+            <div class="gallery-card">
+                <img src="{% static 'images/a.png' %}" alt="Canopy Work">
+            </div>
+
+            <div class="gallery-card">
+                <img src="{% static 'images/b.png' %}" alt="Canopy Work">
+            </div>
+
+            <div class="gallery-card">
+                <img src="{% static 'images/c.png' %}" alt="Canopy Work">
+            </div>
+
+            <div class="gallery-card">
+                <img src="{% static 'images/d.png' %}" alt="Canopy Work">
+            </div>
+
+            <div class="gallery-card">
+                <img src="{% static 'images/e.png' %}" alt="Canopy Work">
+            </div>
+
+            <div class="gallery-card">
+                <img src="{% static 'images/f.png' %}" alt="Canopy Work">
+            </div>
+        </div>
+    </section>
+    {% endblock %}

@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About | Big Boss Awning & Canopies {% endblock %}
+{% block content %}
+<section class="about-section">
+        <div class="about-content">
+
+            <h1>
+                About Us
+            </h1>
+
+            <p>
+                Big Boss Awning and Canopies specializes
+                in high-quality awning and canopy solutions
+                for residential and commercial spaces.
+            </p>
+
+            <p>
+                With years of practical experience,
+                we focus on strong construction,
+                elegant designs, durability,
+                and customer satisfaction.
+            </p>
+
+            <p>
+                From terrace canopies and parking sheds
+                to stylish shop awnings,
+                we provide customized solutions
+                according to customer requirements.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section class="why-us">
+
+        <h2>
+            Why Choose Us?
+        </h2>
+
+
+        <div class="why-container">
+
+            <div class="why-card">
+                  <img src="{% static 'images/istock.jpg' %}"/>
+                 <div class="overlay">
+
+                    <h3>
+                        Premium Materials
+                    </h3>
+
+                    <p>
+                        Durable and weather-resistant
+                        materials for long-lasting protection.
+                    </p>
+
+                 </div>
+
+            </div>
+
+            <div class="why-card">
+                <img src="{% static 'images/pexels-matreding-12954084.jpg' %}">
+                <div class="overlay">
+                <h3>
+                    Modern Designs
+                </h3>
+
+                <p>
+                    Stylish and elegant canopy solutions
+                    for every type of space.
+                </p>
+               </div>
+            </div>
+
+            <div class="why-card">
+               <img src="{% static 'images/wa.png' %}">
+               <div class="overlay">
+                <h3>
+                    Trusted Service
+                </h3>
+                <p>
+                    Customer-focused work with attention
+                    to quality and satisfaction.
+                </p>
+               </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}
