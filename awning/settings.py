@@ -31,6 +31,8 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
+    'admin_interface',
+    'colorfield',
     'website',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,8 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'django.contrib.sites',
-    'admin_interface',
-    'colorfield',
 ]
 
 MIDDLEWARE = [
