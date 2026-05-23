@@ -31,8 +31,6 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_interface',
-    'colorfield',
     'website',
     'django.contrib.admin',
     'django.contrib.auth',
