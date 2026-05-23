@@ -48,7 +48,7 @@ def feedback(request):
     # handle no ratings case
     if average_rating is None:
         average_rating = 0
-        all_feedback = Feedback.objects.all().order_by("-created_at")
+    all_feedback = Feedback.objects.all().order_by("-created_at")
     context = {
         "average_rating": round(average_rating, 1),
         "feedbacks": all_feedback
