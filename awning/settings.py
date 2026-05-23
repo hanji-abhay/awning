@@ -128,4 +128,4 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 ALLOWED_HOSTS = ["*"]
-SITE_ID = 1
+SITE_ID = None
