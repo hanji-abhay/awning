@@ -24,9 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-680p$5nhrrtsb4vq4^5i8+$5ag^z@xc9u&uj7srwwmcr2vi-og'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
-
+if not DEBUG:
+    ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOSTS', 'bigbossawningandcanopies.onrender.com')]
+else:
+    ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -125,6 +128,5 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-ALLOWED_HOSTS = ["*"]
 SITE_ID = 1
 
