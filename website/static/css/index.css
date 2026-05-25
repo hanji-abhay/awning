@@ -35,23 +35,25 @@ html{
 .logo{
     font-size:30px;
     color:gold;
-    margin-bottom:15px;
+    margin-top: 10px;
 }
 
 .nav-links{
     display:flex;
     gap: 10px;
-    justify-content:center;
+    flex-direction: row;
+    justify-content:space-between;
     align-items:center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .nav-links a{
     text-decoration:none;
     color:rgb(240,215,169);
-    padding:10px 15px;
+    padding:10px 10px;
     transition:0.3s;
     font-size:18px;
+    white-space: nowrap;
 }
 
 .nav-links a:hover{
