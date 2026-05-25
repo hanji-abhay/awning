@@ -29,7 +29,6 @@ html{
     top:0;
     z-index:1000;
     backdrop-filter:blur(5px);
-    flex-wrap: wrap;
 }
 
 .logo{
@@ -40,19 +39,22 @@ html{
 
 .nav-links{
     display:flex;
-    gap: 10px;
+    gap: 0px;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
     flex-wrap: nowrap;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 5px auto 0 auto;
 }
 
 .nav-links a{
     text-decoration:none;
     color:rgb(240,215,169);
-    padding:10px 10px;
+    padding:6px 10px;
     transition:0.3s;
-    font-size:18px;
+    font-size:16px;
     white-space: nowrap;
 }
 
@@ -386,22 +388,23 @@ background-color: white;
 @media (max-width: 768px){
 
     .top{
-        padding:12px;
+        padding:10px;
     }
 
     .logo{
         font-size:24px;
-        margin-bottom:10px;
+        margin-bottom:5px;
         text-align:center;
     }
 
     .nav-links{
-        gap:8px;
+        max-width: 100%;
+        justify-content: center;
     }
 
     .nav-links a{
         font-size:16px;
-        padding:8px 10px;
+        padding:5px 5px;
     }
 
     .hero{
